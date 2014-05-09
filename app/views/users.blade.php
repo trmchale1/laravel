@@ -1,4 +1,6 @@
 @extends('layout')
 @section('content')
-	Some Cheese
+	@foreach($users as $user)
+	<p>{{$user->name}}</p>
+	@endforeach
 @stop
