@@ -11,14 +11,4 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-
-Route::get('users', function()
-{
-	$users = User::all();
-	return View::make('users')->with('users', $users);
-
-});
+Route::controller('users', 'UsersController');
